@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --blue: hsl(246, 80%, 60%);
+
+  /* (work) */
+  --light-red: hsl(15, 100%, 70%);
+  /* (play) */
+  --soft-blue: hsl(195, 74%, 62%);
+  /* (study) */
+  --light-red: hsl(348, 100%, 68%);
+  /* (exercise) */
+  --lime-green: hsl(145, 58%, 55%);
+  /* (social) */
+  --violet: hsl(264, 64%, 52%);
+  /* (self care) */
+  --soft-orange: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  /* ## Typography */
+  /* (card titles e.g. Work, Play) */
+  --size: 18px;
+
+  /* ### Font */
+  /* - Weights: 300, 400, 500 */
+  /* [Rubik](https://fonts.google.com/specimen/Rubik) */
+  --font-rubik: "Rubik", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  font-family: var(--font-rubik);
+  cursor: pointer;
+  color: var(--desaturated-blue);
+  font-size: var(--size);
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  background: var(--very-dark-blue);
+  font-family: var(--font-rubik);
+}
+
+.container {
+}
+
+.user-card {
+  background: var(--dark-blue);
+  display: inline-block;
+  border-radius: 1rem;
+}
+
+.user-info {
+  background: var(--blue);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.avatar {
+  width: 75px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+.user-info span {
+  color: var(--pale-blue);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.username {
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.time-period-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.time-period-buttons button:hover {
+  color: white;
+}
+
+button.active {
+  color: white;
+}
