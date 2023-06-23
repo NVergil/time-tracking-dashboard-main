@@ -10,3 +10,30 @@ export const useActiveButton = () => {
 
   return { activeButton, setActiveButton, handleChangePeriod };
 };
+
+export const handleCardInfo = (data, activeButton) => {
+  const {
+    title,
+    imgUrl,
+    color,
+    timeframes: {
+      [activeButton]: { current, previous },
+    },
+  } = data;
+
+  let lapse;
+
+  switch (activeButton) {
+    case "daily":
+      lapse = "Day";
+      break;
+    case "weekly":
+      lapse = "Week";
+      break;
+    case "monthly":
+      lapse = "Month";
+      break;
+  }
+
+  return { title, imgUrl, color, current, previous, lapse };
+};

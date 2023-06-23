@@ -6,19 +6,6 @@
 
   --blue: hsl(246, 80%, 60%);
 
-  /* (work) */
-  --light-red: hsl(15, 100%, 70%);
-  /* (play) */
-  --soft-blue: hsl(195, 74%, 62%);
-  /* (study) */
-  --light-red: hsl(348, 100%, 68%);
-  /* (exercise) */
-  --lime-green: hsl(145, 58%, 55%);
-  /* (social) */
-  --violet: hsl(264, 64%, 52%);
-  /* (self care) */
-  --soft-orange: hsl(43, 84%, 65%);
-
   /* ### Neutral */
 
   --very-dark-blue: hsl(226, 43%, 10%);
@@ -70,31 +57,38 @@ body {
 }
 
 .container {
+  max-width: 1115px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
-
 .user-card {
   background: var(--dark-blue);
-  display: inline-block;
   border-radius: 1rem;
+  max-width: 254px;
+  width: 100%;
 }
-
 .user-info {
   background: var(--blue);
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   padding: 2rem;
+  padding-top: 2.1rem;
+  padding-bottom: 4.9rem;
 }
 .avatar {
-  width: 75px;
-  border: 2px solid white;
+  width: 83px;
+  border: 3px solid white;
   border-radius: 50%;
-  margin-bottom: 3rem;
+  margin-bottom: 2.65rem;
 }
 .user-info span {
   color: var(--pale-blue);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
 }
 .username {
   font-weight: 300;
@@ -106,7 +100,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 1rem;
+  gap: 1.1rem;
   padding: 2rem;
 }
 
@@ -116,4 +110,67 @@ body {
 
 button.active {
   color: white;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  width: 100%;
+  gap: 1.875rem;
+}
+
+.card-container {
+  position: relative;
+  padding-top: 2.8rem;
+  /* max-width: 255px; */
+  overflow: hidden;
+}
+
+.top-design {
+  border-radius: 0.75rem;
+  position: absolute;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+}
+
+.time-container {
+  position: relative;
+  overflow: visible;
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  z-index: 1;
+  background: var(--dark-blue);
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.65rem;
+}
+
+.title p {
+  font-size: var(--size);
+}
+
+.current-time {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.previous-lapse {
+  color: var(--pale-blue);
+  font-size: 14px;
 }

@@ -1,9 +1,13 @@
 import { useActiveButton } from "./utils/handlers";
 import UserCard from "./components/UserCard";
 import data from "./data.json";
+import CardsContainer from "./components/CardsContainer";
 
 const App = () => {
   const { activeButton, setActiveButton, handleChangePeriod } = useActiveButton();
+  if (!activeButton) {
+    setActiveButton("daily")
+  }
   return (
     <main>
       <section className="container">
@@ -11,16 +15,7 @@ const App = () => {
           activeButton={activeButton}
           handleChangePeriod={handleChangePeriod}
         />
-        {
-          data.map((info) => {
-            if (activeButton && info.timeframes.daily) {
-              console.log(info.timeframes.daily);
-            }
-            if (!activeButton) {
-              setActiveButton("daily")
-            }
-          })
-        }
+        <CardsContainer data={data} activeButton={activeButton} setActiveButton={setActiveButton} />
       </section>
     </main>
   );
