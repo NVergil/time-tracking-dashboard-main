@@ -15,12 +15,25 @@ const Card = ({ data, activeButton }) => {
       <div className="time-container">
         <div className="title">
           <p>{title}</p>
-          <img src="/src/assets/icon-ellipsis.svg" alt="" />
+          <svg
+            width="21"
+            height="5"
+            xmlns="http://www.w3.org/2000/svg"
+            className="ellipsis"
+          >
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#currentColor"
+              fillRule="evenodd"
+            />
+          </svg>
         </div>
-        <p className="current-time">{current}hrs</p>
-        <p className="previous-lapse">
-          Last {lapse} - {previous}hrs
-        </p>
+        <div className="_2">
+          <p className="current-time">{current}hrs</p>
+          <p className="previous-lapse">
+            Last {lapse} - {previous}hrs
+          </p>
+        </div>
       </div>
     </div>
   );

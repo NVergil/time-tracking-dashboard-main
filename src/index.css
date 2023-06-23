@@ -11,6 +11,7 @@
   --very-dark-blue: hsl(226, 43%, 10%);
   --dark-blue: hsl(235, 46%, 20%);
   --desaturated-blue: hsl(235, 45%, 61%);
+  --desaturated-blue-200: hsl(235, 42%, 35%);
   --pale-blue: hsl(236, 100%, 87%);
 
   /* ## Typography */
@@ -26,11 +27,7 @@
 * {
   box-sizing: border-box;
 }
-
 h1,
-h2,
-h3,
-h4,
 p {
   margin: 0;
 }
@@ -56,6 +53,7 @@ body {
   font-family: var(--font-rubik);
 }
 
+/* Container Section */
 .container {
   max-width: 1115px;
   margin: 0 auto;
@@ -63,6 +61,8 @@ body {
   flex-direction: row;
   gap: 2rem;
 }
+
+/* User Card Section */
 .user-card {
   background: var(--dark-blue);
   border-radius: 1rem;
@@ -112,6 +112,8 @@ button.active {
   color: white;
 }
 
+/* Cards Container Section */
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -120,10 +122,11 @@ button.active {
   gap: 1.875rem;
 }
 
+/* Card Section */
+
 .card-container {
   position: relative;
   padding-top: 2.8rem;
-  /* max-width: 255px; */
   overflow: hidden;
 }
 
@@ -151,6 +154,7 @@ button.active {
   width: 100%;
   height: 100%;
   color: white;
+  cursor: pointer;
 }
 
 .title {
@@ -164,6 +168,11 @@ button.active {
   font-size: var(--size);
 }
 
+.ellipsis {
+  fill: #bbc0ff;
+  cursor: pointer;
+}
+
 .current-time {
   font-size: 3.5rem;
   font-weight: 300;
@@ -173,4 +182,14 @@ button.active {
 .previous-lapse {
   color: var(--pale-blue);
   font-size: 14px;
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 14px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+.attribution a {
+  color: var(--pale-blue);
 }

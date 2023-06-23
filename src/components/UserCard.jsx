@@ -4,10 +4,12 @@ const UserCard = ({ activeButton, handleChangePeriod }) => {
     <div className="user-card">
       <div className="user-info">
         <img className="avatar" src="/image-jeremy.png" alt="user-image" />
-        <span>Report for</span>
-        <h1 className="username">
-          Jeremy <br /> Robson
-        </h1>
+        <div>
+          <span>Report for</span>
+          <h1 className="username">
+            Jeremy <br /> Robson
+          </h1>
+        </div>
       </div>
       <div className="time-period-buttons">
         <button

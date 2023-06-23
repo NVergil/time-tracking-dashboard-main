@@ -1,0 +1,80 @@
+
+@media screen and (min-width: 1024px) {
+  .ellipsis:hover {
+    fill: white;
+  }
+  .time-container:hover {
+    background: var(--desaturated-blue-200);
+  }
+}
+@media screen and (max-width: 1090px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .user-info {
+    padding-block: 8rem;
+  }
+}
+
+@media screen and (max-width: 838px) {
+  .current-time {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 730px) {
+  .container {
+    flex-direction: column;
+  }
+  .user-card {
+    max-width: initial;
+  }
+  .user-info {
+    padding-block: 2rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .avatar {
+    margin: 0;
+  }
+  br {
+    display: none;
+  }
+  .time-period-buttons {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 487px) {
+  body {
+    padding: 1.5rem;
+  }
+  .avatar {
+    width: 70px;
+  }
+  .username {
+    font-size: 1.5rem;
+  }
+  .time-period-buttons {
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+  .cards-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .card-container ._2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title {
+    margin-bottom: 0.5rem;
+  }
+  .current-time {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
